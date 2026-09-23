@@ -1,4 +1,4 @@
-# @permsy/adapter-nextgen
+# nextgen-permsy-adapter
 
 Official [Nextgen](https://github.com/Discordjs-Nextgen/nextgen) adapter for the [Permsy](https://github.com/Umit-Ulusoy/permsy) permission management engine.
 
@@ -11,7 +11,7 @@ Official [Nextgen](https://github.com/Discordjs-Nextgen/nextgen) adapter for the
 ### Installation
 
 ```bash
-npm install @permsy/adapter-nextgen permsy
+npm install nextgen-permsy-adapter permsy
 ```
 
 ### Basic Setup (Recommended)
@@ -19,7 +19,7 @@ npm install @permsy/adapter-nextgen permsy
 ```javascript
 import { App, Intents } from 'discordjs-nextgen';
 import { Permsy } from 'permsy';
-import { NextgenAdapter, setupPermsyForPrefix } from '@permsy/adapter-nextgen';
+import { NextgenAdapter, setupPermsyForPrefix } from 'nextgen-permsy-adapter';
 
 const app = new App({ intents: Intents.ALL });
 
@@ -95,7 +95,7 @@ export default {
 **Use `setupPermsyForPrefix()` for automatic permission checking on ALL commands.**
 
 ```javascript
-import { setupPermsyForPrefix } from '@permsy/adapter-nextgen';
+import { setupPermsyForPrefix } from 'nextgen-permsy-adapter';
 
 setupPermsyForPrefix(app, permsy);
 
@@ -127,7 +127,7 @@ export default {
 **Use `withPermsy()` when you want to protect SPECIFIC commands only.**
 
 ```javascript
-import { withPermsy } from '@permsy/adapter-nextgen';
+import { withPermsy } from 'nextgen-permsy-adapter';
 
 export default {
   name: 'sensitive',
@@ -149,7 +149,7 @@ export default {
 
 **Setup:**
 ```javascript
-import { NextgenAdapter, attachPermsy } from '@permsy/adapter-nextgen';
+import { NextgenAdapter, attachPermsy } from 'nextgen-permsy-adapter';
 
 const permsy = new Permsy({
   configDir: './config',
@@ -170,7 +170,7 @@ app.use(attachPermsy(permsy));
 > **Note:** This mode may have limitations with Nextgen's command system. Use `setupPermsyForPrefix` instead for better compatibility.
 
 ```javascript
-import { PermsyPlugin } from '@permsy/adapter-nextgen';
+import { PermsyPlugin } from 'nextgen-permsy-adapter';
 
 app.use(new PermsyPlugin(permsy));
 ```
@@ -184,7 +184,7 @@ app.use(new PermsyPlugin(permsy));
 The core adapter that bridges Nextgen Context with Permsy.
 
 ```javascript
-import { NextgenAdapter } from '@permsy/adapter-nextgen';
+import { NextgenAdapter } from 'nextgen-permsy-adapter';
 
 const adapter = new NextgenAdapter();
 
@@ -213,7 +213,7 @@ const permsy = new Permsy({
 
 **Example:**
 ```javascript
-import { setupPermsyForPrefix } from '@permsy/adapter-nextgen';
+import { setupPermsyForPrefix } from 'nextgen-permsy-adapter';
 
 const app = new App({ intents: Intents.ALL });
 const permsy = new Permsy({
@@ -243,7 +243,7 @@ Wraps a single command handler to inject command name for Permsy checks.
 
 **Example:**
 ```javascript
-import { withPermsy } from '@permsy/adapter-nextgen';
+import { withPermsy } from 'nextgen-permsy-adapter';
 
 export default {
   name: 'ban',
@@ -267,7 +267,7 @@ Middleware plugin for automatic permission checking.
 
 **Example:**
 ```javascript
-import { PermsyPlugin } from '@permsy/adapter-nextgen';
+import { PermsyPlugin } from 'nextgen-permsy-adapter';
 
 app.use(new PermsyPlugin(permsy));
 ```
@@ -352,7 +352,7 @@ export default definePermissionConfig({
 ```javascript
 import { App, Intents } from 'discordjs-nextgen';
 import { Permsy } from 'permsy';
-import { NextgenAdapter, setupPermsyForPrefix } from '@permsy/adapter-nextgen';
+import { NextgenAdapter, setupPermsyForPrefix } from 'nextgen-permsy-adapter';
 import 'dotenv/config';
 
 const app = new App({ intents: Intents.ALL });
@@ -492,7 +492,7 @@ MIT © Ümit ULUSOY
 ### Kurulum
 
 ```bash
-npm install @permsy/adapter-nextgen permsy
+npm install nextgen-permsy-adapter permsy
 ```
 
 ### Temel Kurulum (Önerilen)
@@ -500,7 +500,7 @@ npm install @permsy/adapter-nextgen permsy
 ```javascript
 import { App, Intents } from 'discordjs-nextgen';
 import { Permsy } from 'permsy';
-import { NextgenAdapter, setupPermsyForPrefix } from '@permsy/adapter-nextgen';
+import { NextgenAdapter, setupPermsyForPrefix } from 'nextgen-permsy-adapter';
 
 const app = new App({ intents: Intents.ALL });
 
@@ -576,7 +576,7 @@ export default {
 **TÜM komutlarda otomatik izin kontrolü için `setupPermsyForPrefix()` kullanın.**
 
 ```javascript
-import { setupPermsyForPrefix } from '@permsy/adapter-nextgen';
+import { setupPermsyForPrefix } from 'nextgen-permsy-adapter';
 
 setupPermsyForPrefix(app, permsy);
 
@@ -608,7 +608,7 @@ export default {
 **Sadece BELİRLİ komutları korumak istediğinizde `withPermsy()` kullanın.**
 
 ```javascript
-import { withPermsy } from '@permsy/adapter-nextgen';
+import { withPermsy } from 'nextgen-permsy-adapter';
 
 export default {
   name: 'hassas',
@@ -637,7 +637,7 @@ export default {
 > **Not:** Bu modun Nextgen'in komut sistemiyle sınırlamaları olabilir. Daha iyi uyumluluk için `setupPermsyForPrefix` kullanın.
 
 ```javascript
-import { PermsyPlugin } from '@permsy/adapter-nextgen';
+import { PermsyPlugin } from 'nextgen-permsy-adapter';
 
 app.use(new PermsyPlugin(permsy));
 ```
@@ -651,7 +651,7 @@ app.use(new PermsyPlugin(permsy));
 Nextgen Context'i Permsy ile birleştiren ana adaptör.
 
 ```javascript
-import { NextgenAdapter } from '@permsy/adapter-nextgen';
+import { NextgenAdapter } from 'nextgen-permsy-adapter';
 
 const adapter = new NextgenAdapter();
 
@@ -680,7 +680,7 @@ const permsy = new Permsy({
 
 **Örnek:**
 ```javascript
-import { setupPermsyForPrefix } from '@permsy/adapter-nextgen';
+import { setupPermsyForPrefix } from 'nextgen-permsy-adapter';
 
 const app = new App({ intents: Intents.ALL });
 const permsy = new Permsy({
@@ -710,7 +710,7 @@ Tek bir komut handler'ını wrap ederek Permsy kontrolleri için komut adını i
 
 **Örnek:**
 ```javascript
-import { withPermsy } from '@permsy/adapter-nextgen';
+import { withPermsy } from 'nextgen-permsy-adapter';
 
 export default {
   name: 'ban',
@@ -732,7 +732,7 @@ Otomatik izin kontrolü için middleware plugin.
 
 **Örnek:**
 ```javascript
-import { PermsyPlugin } from '@permsy/adapter-nextgen';
+import { PermsyPlugin } from 'nextgen-permsy-adapter';
 
 app.use(new PermsyPlugin(permsy));
 ```
@@ -747,7 +747,7 @@ app.use(new PermsyPlugin(permsy));
 ```javascript
 import { App, Intents } from 'discordjs-nextgen';
 import { Permsy } from 'permsy';
-import { NextgenAdapter, setupPermsyForPrefix } from '@permsy/adapter-nextgen';
+import { NextgenAdapter, setupPermsyForPrefix } from 'nextgen-permsy-adapter';
 import 'dotenv/config';
 
 const app = new App({ intents: Intents.ALL });

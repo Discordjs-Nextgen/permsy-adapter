@@ -1,6 +1,6 @@
 # 📚 Permsy Nextgen Adapter - Complete Usage Guide
 
-Comprehensive guide for all usage modes of @permsy/adapter-nextgen.
+Comprehensive guide for all usage modes of nextgen-permsy-adapter.
 
 ## 📖 Table of Contents
 
@@ -19,7 +19,7 @@ Comprehensive guide for all usage modes of @permsy/adapter-nextgen.
 ## 🚀 Installation
 
 ```bash
-npm install @permsy/adapter-nextgen permsy
+npm install nextgen-permsy-adapter permsy
 ```
 
 ---
@@ -34,7 +34,7 @@ npm install @permsy/adapter-nextgen permsy
 ```javascript
 import { App, Intents } from 'discordjs-nextgen';
 import { Permsy } from 'permsy';
-import { NextgenAdapter, setupPermsyForPrefix } from '@permsy/adapter-nextgen';
+import { NextgenAdapter, setupPermsyForPrefix } from 'nextgen-permsy-adapter';
 
 const app = new App({ intents: Intents.ALL });
 
@@ -100,7 +100,7 @@ export default definePermissionConfig({
 
 **Setup:**
 ```javascript
-import { withPermsy } from '@permsy/adapter-nextgen';
+import { withPermsy } from 'nextgen-permsy-adapter';
 
 export default {
   name: 'admin',
@@ -138,7 +138,7 @@ export default {
 
 **Setup:**
 ```javascript
-import { PermsyPlugin } from '@permsy/adapter-nextgen';
+import { PermsyPlugin } from 'nextgen-permsy-adapter';
 
 app.use(new PermsyPlugin(permsy));
 ```
@@ -240,7 +240,7 @@ commands: {
 // index.js
 import { App, Intents } from 'discordjs-nextgen';
 import { Permsy } from 'permsy';
-import { NextgenAdapter, setupPermsyForPrefix } from '@permsy/adapter-nextgen';
+import { NextgenAdapter, setupPermsyForPrefix } from 'nextgen-permsy-adapter';
 
 const app = new App({ intents: Intents.ALL });
 
@@ -316,7 +316,7 @@ commands: {
 
 ```javascript
 // commands/prefix/admin.js
-import { withPermsy } from '@permsy/adapter-nextgen';
+import { withPermsy } from 'nextgen-permsy-adapter';
 
 export default {
   name: 'admin',
@@ -533,7 +533,7 @@ run: withPermsy('special', async (ctx) => {
 setupPermsyForPrefix(app, permsy);
 
 // Mode 2: Per-command
-import { withPermsy } from '@permsy/adapter-nextgen';
+import { withPermsy } from 'nextgen-permsy-adapter';
 run: withPermsy('name', async (ctx) => { ... })
 
 // Mode 3: Plugin
