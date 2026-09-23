@@ -1,0 +1,54 @@
+{
+  "name": "@permsy/adapter-nextgen",
+  "version": "1.0.0",
+  "description": "Official Nextgen adapter for the Permsy permission management engine.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup"
+  },
+  "keywords": [
+    "permsy",
+    "nextgen",
+    "discord-nextgen",
+    "adapter",
+    "permissions",
+    "authorization",
+    "discord-bot",
+    "rbac"
+  ],
+  "author": "Burak BEHLÜL",
+  "license": "MIT",
+  "homepage": "https://github.com/Discordjs-Nextgen/permsy-adapter-nextgen#readme",
+  "bugs": {
+    "url": "https://github.com/Discordjs-Nextgen/permsy-adapter-nextgen/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Discordjs-Nextgen/permsy-adapter-nextgen.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "permsy": "^1.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.5",
+    "permsy": "^1.0.1",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.3"
+  }
+}
