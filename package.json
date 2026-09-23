@@ -1,5 +1,5 @@
 {
-  "name": "@permsy/adapter-nextgen",
+  "name": "nextgen-permsy-adapter",
   "version": "1.0.0",
   "description": "Official Nextgen adapter for the Permsy permission management engine.",
   "type": "module",
